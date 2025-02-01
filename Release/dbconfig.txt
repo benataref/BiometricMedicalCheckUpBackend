@@ -1,0 +1,1 @@
+Server=localhost:8080;Database=fingerprintscaner;uid=root;Password='';

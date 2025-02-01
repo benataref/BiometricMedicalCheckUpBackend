@@ -1,0 +1,11 @@
+const express=require('express');
+const vitalcontroller = require ('../controllers/vitalcontroller');
+const router=express.Router();
+const Vitalcontroller= new vitalcontroller();
+router.get('/get/:id', Vitalcontroller.getById);
+ router.get('/get', Vitalcontroller.get);
+router.post('/create', Vitalcontroller.create);
+router.put('/update/:id', Vitalcontroller.Updated);
+router.delete('/delete/:id', Vitalcontroller.Delete); 
+router.get('/getv/:pid', Vitalcontroller.getv);
+module.exports= router;

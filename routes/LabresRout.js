@@ -1,0 +1,11 @@
+const express=require('express');
+const LabresultController = require ('../controllers/LabresultController');
+const router=express.Router();
+const labresultController= new LabresultController();
+router.get('/get/:id', labresultController.getById);
+router.get('/getL/:pid', labresultController.getL);
+ router.get('/get', labresultController.get);
+router.post('/create', labresultController.create);
+router.put('/update/:id', labresultController.Updated);
+router.delete('/delete/:id', labresultController.Delete); 
+module.exports= router;

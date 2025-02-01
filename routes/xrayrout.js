@@ -1,0 +1,12 @@
+const express=require('express');
+const xrayController = require ('../controllers/xrayController');
+const router=express.Router();
+const XrayController= new xrayController();
+router.get('/get/:id', XrayController.getById);
+ router.get('/get', XrayController.get);
+router.post('/create', XrayController.create);
+router.put('/update/:id', XrayController.Updated);
+router.delete('/delete/:id', XrayController.Delete); 
+router.get('/getx/:pid', XrayController.getx);
+router.get('/barcode/:pid', XrayController.barcode);
+module.exports= router;
