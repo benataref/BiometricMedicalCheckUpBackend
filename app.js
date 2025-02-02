@@ -10,14 +10,9 @@ require('./utlis/db')
 
 const apiRoutes=require('./routes/api')
 const app=express();
-/* const listUsbDevices = () => {
-    const devices = usb.getDeviceList();
-    devices.forEach(device => {
-        console.log(`Device found: ${device.deviceDescriptor.idVendor}:${device.deviceDescriptor.idProduct}`);
-    });
-}; 
 
-listUsbDevices();*/
+
+
 app.use(express.json());
 //app.use(express.static(path.join(__dirname, './dist')));
 app.use(cors());
@@ -31,10 +26,10 @@ app.use(morgan('dev'));
 
 
 
-app.get('*', (req, res, next) => {
+/* app.get('*', (req, res, next) => {
     return res.sendFile(path.join(__dirname, './dist/index.html'));
   });  
-
+ */
 
 const port = process.env.PORT || 8000;
 
