@@ -24,11 +24,9 @@ app.use('/workingDemo', express.static(path.join(__dirname, 'workingDemo/')));
 app.use('/Release', express.static(path.join(__dirname, 'Release/')));
 app.use(morgan('dev'));
 
-
-
-//  app.get('*', (req, res, next) => {
-//     return res.sendFile(path.join(__dirname, './dist/index.html'));
-//   });  
+ app.get('*', (req, res, next) => {
+    return res.sendFile(path.join(__dirname, './dist/index.html'));
+ });   
  
 
 const port = process.env.PORT || 8000;
