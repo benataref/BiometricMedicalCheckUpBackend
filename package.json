@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
     "atlasmedicalcenter": "file:..",
     "cordova-plugin-fp-secugen": "^0.1.14",
     "cors": "^2.8.5",
