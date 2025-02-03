@@ -26,10 +26,10 @@ app.use(morgan('dev'));
 
 
 
-/* app.get('*', (req, res, next) => {
+ app.get('*', (req, res, next) => {
     return res.sendFile(path.join(__dirname, './dist/index.html'));
   });  
- */
+ 
 
 const port = process.env.PORT || 8000;
 
