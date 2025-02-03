@@ -14,7 +14,7 @@ const app=express();
 
 
 app.use(express.json());
-//app.use(express.static(path.join(__dirname, './dist')));
+app.use(express.static(path.join(__dirname, './dist')));
 app.use(cors());
 app.use('/api', apiRoutes);
 app.use('/MindrayFolder', express.static(path.join(__dirname, 'MindrayFolder')));
