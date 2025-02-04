@@ -36,7 +36,10 @@ const port = process.env.PORT || 8000;
  if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));  // Morgan for logging HTTP requests
  } */
-
+    app.use(cors({
+        origin:"https://biometric-medical-check-up-backend.vercel.app/",
+        credentails:true
+    }))
 app.use(express.json());
 app.listen(port,  ()=>{
     console.log(` my server is running at http://localhost:${port}`);
@@ -50,6 +53,7 @@ if(req.method==='OPTIONS'){
     res.header('Access-Control-Allow-Methods','PUT','POST','PATCH','DELETE','GET');
     return res.status(200).json({});
 }
+
 next();
 });
 app.use((req, res, next)=>{
