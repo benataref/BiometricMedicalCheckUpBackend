@@ -23,18 +23,7 @@ class MindrayController {
         }
       
       } 
-/*       getById = (req, res) => {
-        let id = req.params.id;
-        Maglumi800.findById(id)
-          .then(doc => {
-            const pdfUrl = doc.file ? `${req.protocol}://${req.get('host')}/${doc.file}` : null;
-            res.status(200).json({ ...doc._doc, pdfUrl });
-          })
-          .catch(err => {
-            console.log(err);
-            res.status(500).json({ error: err });
-          });
-      } */
+
           getById = (req, res) => {
             let id = req.params.id;
             Mindray.findById(id)
