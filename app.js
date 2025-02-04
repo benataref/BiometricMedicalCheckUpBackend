@@ -31,11 +31,11 @@ app.use(morgan('dev'));
 
 const port = process.env.PORT || 8000;
 
- 
-/*  app.use(compression());
+ /*  app.use(compression());
  if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));  // Morgan for logging HTTP requests
  } */
+
     app.use(cors({
         origin:"https://biometric-medical-check-up-backend.vercel.app/",
         credentails:true
