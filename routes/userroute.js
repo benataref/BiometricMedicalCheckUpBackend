@@ -1,5 +1,5 @@
 const express =require('express');
-const usercontrollers=require('../controllers/usercontrollers');
+const usercontrollers=require('../controllers/usercontrollers1');
 
 const router=express.Router()
 const Usercontrollers=new usercontrollers();
